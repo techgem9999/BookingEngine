@@ -1,0 +1,1 @@
+insert into Persob values ()
