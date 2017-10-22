@@ -41,5 +41,21 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="bookingengine"/>
+  <table-filter match-name="roomdetails"/>
+  <table-filter match-name="roomarchive"/>
+  <table-filter match-name="hotel"/>
+  <table-filter match-name="room"/>
+  <table-filter match-name="booking"/>
+  <table-filter match-name="gender"/>
+  <table-filter match-name="roomtype"/>
+  <table-filter match-name="country"/>
+  <table-filter match-name="paymentmethod"/>
+  <table-filter match-name="contact"/>
+  <table-filter match-name="customer"/>
+  <table-filter match-name="bookingdetails"/>
   <table-filter match-name="person"/>
+  <table-filter match-name="paymentdetails"/>
+  <table-filter match-name="bed"/>
+  <table-filter match-name="address"/>
+  <table-filter match-name="city"/>
 </hibernate-reverse-engineering>

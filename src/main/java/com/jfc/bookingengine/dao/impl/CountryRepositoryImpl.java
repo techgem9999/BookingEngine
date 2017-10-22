@@ -13,12 +13,12 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author jfc
  */
+@Named
 public class CountryRepositoryImpl implements CountryRepository {
 
     @PersistenceContext(unitName = "bookingenginePU")
@@ -26,8 +26,8 @@ public class CountryRepositoryImpl implements CountryRepository {
 
     @Override
     public void add(Country t) throws RepositoryException {
-           entityManager.persist(t);
-         
+        entityManager.persist(t);
+
     }
 
     @Override

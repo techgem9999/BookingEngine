@@ -11,7 +11,6 @@ import com.jfc.bookingengine.services.CountryService;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import org.springframework.stereotype.Service;
 
 /**
  *

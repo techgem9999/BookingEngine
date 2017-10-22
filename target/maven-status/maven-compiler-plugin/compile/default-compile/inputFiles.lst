@@ -23,13 +23,11 @@ C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\book
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dto\Address.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\services\junk\Informal.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\impl\HotelRepositoryImpl.java
-C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\controller\ProductController.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\services\impl\CountryServiceImpl.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\impl\CustomerRepositoryImpl.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\services\AddressService.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\impl\RoomRepositoryImpl.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\impl\ContactRepositoryImpl.java
-C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\controller\config\PersistenceJPAConfiguration.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\ContactRepository.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\GenderRepository.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\REST\JAXRSConfiguration.java
@@ -41,15 +39,12 @@ C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\book
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\services\junk\Cargo.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\PaymentmethodRepository.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dto\Booking.java
-C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\controller\config\ServletContextConfiguration.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\RoomRepository.java
-C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\controller\CountryController.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\CountryRepository.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\impl\BookingRepositoryImpl.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\PaymentdetailsRepository.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\impl\GenderRepositoryImpl.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dto\Hotel.java
-C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\controller\config\RootContextConfiguration.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dto\Contact.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\services\impl\AddressServiceImpl.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\PersonRepository.java
@@ -68,4 +63,3 @@ C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\book
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\AddressRepository.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dto\Customer.java
 C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\dao\impl\CountryRepositoryImpl.java
-C:\Users\jfc\Documents\NetBeansProjects\BookingEngine\src\main\java\com\jfc\bookingengine\controller\config\Bootstrap.java
