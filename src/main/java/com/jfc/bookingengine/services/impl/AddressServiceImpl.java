@@ -17,13 +17,21 @@ import javax.inject.Inject;
  * @author jfc
  */
 @Stateless
-public class AddressServiceImpl implements AddressService{
+public class AddressServiceImpl implements AddressService {
 
-    @Inject AddressRepository addressRepository;
-    
+    private AddressRepository addressRepository;
+
+    public AddressServiceImpl() {
+    }
+
+    @Inject
+    public AddressServiceImpl(AddressRepository addressRepository) {
+        this.addressRepository = addressRepository;
+    }
+
     @Override
     public List<Address> get() throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return addressRepository.findAll();
     }
 
     @Override
@@ -45,5 +53,5 @@ public class AddressServiceImpl implements AddressService{
     public void delete(int id) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

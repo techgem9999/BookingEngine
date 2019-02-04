@@ -5,11 +5,6 @@
  */
 package com.jfc.bookingengine.REST;
 
-import com.jfc.bookingengine.dao.CountryRepository;
-import com.jfc.bookingengine.services.junk.Cargo;
-import com.jfc.bookingengine.services.junk.DomainBean;
-import com.jfc.bookingengine.services.junk.Informal;
-import java.util.List;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
@@ -24,56 +19,29 @@ import com.jfc.bookingengine.dao.CrudRepository;
 import com.jfc.bookingengine.dao.exception.RepositoryException;
 import com.jfc.bookingengine.dto.Country;
 import com.jfc.bookingengine.services.CountryService;
-import java.math.BigDecimal;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.ws.rs.core.Response;
 
 /**
  *
  * @author jfc
  */
 @Path("domain")
-public class Domain {
+public class Booking {
 
-    @Inject
-    DomainBean domainBean;
-    @Inject
-    Cargo cargo;
-    @Inject
-    @Informal
-    List<String> list;
     @Inject
     CrudRepository personRepository;
     @Inject
     CountryService countryService;
 
-    @GET
-    @Path("/domain")
-    public String getPath() {
-        return domainBean.callMe();
-    }
-
-    @GET
-    @Path("/cargo")
-    public String method() {
-        return cargo.method() + " a";
-    }
 
     @GET
     @Path("produces/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public String produces(@Context UriInfo uri, @PathParam("id") @Min(value = 2, message = "wrong") @Valid String id) {
         StringBuilder sb = new StringBuilder();
-        list.forEach(l -> sb.append(l).append(" "));
         return sb.toString() + uri.getPath() + " path param " + id;
     }
 
@@ -90,14 +58,18 @@ public class Domain {
 
     @GET
     @Path("countries")
-    public JsonArray getCountry() throws Exception {
-        return countryService.get().stream()
+    public Response getCountry() throws Exception {
+        JsonArray build = countryService.get().stream()
                 .map(h -> Json.createObjectBuilder()
-                .add("Country Id", h.getCountryId())
-                .add("Country Name", h.getName())
-                .build())
+                        .add("id", h.getCountryId())
+                        .add("name", h.getName())
+                        .build())
                 .collect(Json::createArrayBuilder, JsonArrayBuilder::add, JsonArrayBuilder::add)
                 .build();
+        return Response.ok()
+            .header("Access-Control-Allow-Origin", "*")
+            .header("Access-Control-Allow-Methods", "GET, OPTIONS")
+            .status(200).entity(build).build();
     }
 
     @GET
@@ -106,22 +78,4 @@ public class Domain {
         return countryService.get(id);
     }
 
-    @GET
-    @Path("json")
-    public JsonObject getJson() {
-        return Json.createObjectBuilder().add("Hello", " World").build();
-    }
-
-    @POST
-    @Path("add")
-    public void addCountry(@Valid Country country) throws Exception {
-        System.out.println("test " + country);
-        countryService.create(country);
-    }
-
-    @POST
-    @Path("validate")
-    public void addValid(@Valid @Size (max = 4, min = 2) String value) {
-        System.out.println(value);
-    }
 }
